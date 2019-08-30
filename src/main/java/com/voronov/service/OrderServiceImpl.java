@@ -15,6 +15,7 @@ public class OrderServiceImpl implements OrderService{
             if(!orders.isEmpty()) {
                 Order lastOrder = orders.get(orders.size() - 1);
                 order.setId(lastOrder.getId()+1);
+
                 orderRepository.save(order);
             }
         }
